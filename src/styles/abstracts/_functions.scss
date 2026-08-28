@@ -1,7 +1,10 @@
 @use 'sass:map';
 @use './maps' as *;
 
+//LINEA PARA IMPORTAR 
+// @use '../../../styles/abstracts/functions' as *;
 
+// ESTO SE USA DENTRO DE OTRO ARCHIVO SCSS, EVITA QUE TENTER QUE ESCRIBIR EL DOBLE MAP.
 
 @function get-color($group, $variant) {
   @return map.get(map.get($colors, $group), $variant);
@@ -20,7 +23,23 @@
 }
 
 
-// funcion para font-family
+// funcion para font-family - no es necesario una funcion usarlo como una variable
 @function font-family($key) {
   @return map.get($font-families, $key);
+}
+
+
+// Función para font-size
+  // uso font-size: font-size(xl)
+@function font-size($size) {
+  $font: map.get($font-sizes, $size);
+  @return map.get($font, size);
+}
+
+
+// Funcion para line-height
+  // uso line-height: line-height(xl);
+@function line-height($size) {
+  $font: map.get($font-sizes, $size);
+  @return map.get($font, line);
 }

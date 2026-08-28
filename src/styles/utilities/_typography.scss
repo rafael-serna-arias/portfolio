@@ -1,6 +1,9 @@
 @use 'sass:map';
 @use '../abstracts/maps' as *;
 
+// ESTO SE USA DIRECTAMENTE EN HTML O JSX COMO UNA CLASE.
+// ESTO SON utility class Y MODIFICADOR DE VALORES ETABLECIDOS COMO H1 EN CUAL TIENE UNAS ESPECIFICACIONES QUE INCLUSO CAMBIAN PARA MOBIL
+
 // Heading
 @each $tag, $values in $headings {
   #{$tag}, // Aplica directamente a la etiqueta h1, h2, etc.
@@ -26,6 +29,7 @@
 
 // Body
 
+// No usar cuando solo modifica una cosa no vale la pena usar un utility class
 // Sizes
 @each $key, $values in $font-sizes {
   .text-#{$key} {
@@ -34,14 +38,23 @@
   }
 }
 
+// No usar cuando solo modifica una cosa no vale la pena usar un utility class
 // Family
+  // font-text
+  // font-display
 @each $name, $family in $font-families {
   .font-#{$name} {
     font-family: $family;
   }
 }
 
+
+// No usar cuando solo modifica una cosa no vale la pena usar un utility class
 // Pesos
+  //font-regular
+  //font-medium
+  //font-semibold
+  //font-bold
 @each $name, $weight in $font-weights {
   .font-#{$name} {
     font-weight: $weight;
@@ -49,6 +62,8 @@
 }
 
 
+
+//Esto si vale la pena como Utility porque una sola clase esta escapsulando varias decisiones de diseño
 /* Emphasis HIGH */
 .body-l--emphasis-high {
   font-family: map.get($font-families, display);

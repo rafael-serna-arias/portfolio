@@ -15,12 +15,144 @@ function MoodboardGenerator() {
       <div className="page__content">
         <div className="moodboard-layout">
 
-          <h1>UX Case Study</h1>
+          <h1>UX case study</h1>
+
+          <section className="overview">
+
+            <h2>Overview</h2>
+
+            <p>
+              The Moodboard Tool is a guided digital experience designed to help clients define 
+              their design preferences in a structured and intuitive way. The project originated 
+              from recurring communication challenges observed during commercial interior design 
+              projects.
+            </p>
+
+            <p>
+              By transforming a traditionally ambiguous briefing process into a step-by-step
+              interactive system, the tool aims to reduce misunderstandings, align expectations 
+              early, and improve efficiency during the initial design phase.
+            </p>
+
+            <ul className="overview-meta ">
+              <li><strong>Role:</strong> UX Designer & Front-End Developer</li>
+              <li><strong>Scope:</strong> Research, Interaction Design, UI Design, Front-End Implementation</li>
+              <li><strong>Context:</strong> Commercial Interior Design</li>
+              <li><strong>Tools:</strong> Figma, JavaScript, Sass</li>
+            </ul>
+          </section>
+
+          <section className="problem-statement">
+            <div>
+              <h2>Problem statement</h2>
+            </div>
+
+            <div>
+              <p>
+                While working as a commercial space designer, I repeatedly encountered the same challenge: 
+                project briefs were often incomplete, and clients rarely provided visual references to guide the process.
+              </p>
+
+              <p>
+                This was not due to a lack of interest, but rather the complexity of design decision-making. 
+                Design is not just about selecting a “style”; each direction represents a cohesive system of 
+                colors, materials, finishes, and furniture. Understanding how these elements interact requires 
+                time, exposure, and structured guidance.
+              </p>
+
+              <p>
+                As a result, the early design phase became inefficient. Misaligned expectations led to 
+                additional revisions, delays, and unnecessary friction in communication.
+              </p>
+
+              <p>
+                There was an opportunity to create a structured, step-by-step system that simplifies 
+                decision-making and makes the design selection process more accessible for clients.
+              </p>
+            </div>
+          </section>
+
+          <section className="user-context">
+
+            <div>
+              <h2>User context</h2>
+            </div>
+
+            <div>
+
+              <p>
+                The tool is designed for clients working with interior designers
+                who need a structured way to group and select their visual preferences
+                before the design process advances.
+              </p>
+
+              <p>
+                Clients often struggle to clearly communicate what they like,
+                which can lead to misunderstandings, unnecessary revisions,
+                and duplicated work for the designer.
+              </p>
+
+              <p>
+                By allowing users to visually organize styles, colors, and materials
+                in a guided and mobile-friendly interface,
+                the tool aims to reduce ambiguity and improve alignment
+                between client and designer from the early stages of the project.
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <section className="goals-constraints">
+
+            <div>
+              <h2>Goals & constraints</h2>
+            </div>
+
+            <div>
+
+              <p>
+                The main objective was to create a structured system of predefined design
+                options that are logically connected. Instead of asking clients to define
+                everything at once, the experience guides them through a step-by-step
+                selection process.
+              </p>
+
+              <p>
+                Users begin by selecting a design style. Based on that choice, they are
+                presented with curated options aligned to that style, including specific
+                color palettes, materials, and furniture typologies.
+              </p>
+
+              <p>
+                The system was designed to be:
+              </p>
+
+              <ul>
+                <li>Easy to understand</li>
+                <li>Fast to complete</li>
+                <li>Reduces cognitive overload</li>
+                <li>Ensures visual and conceptual consistency</li>
+              </ul>
+
+              <p>
+                To maintain quality and consistency within the available timeframe, the
+                initial version focused on three design styles. Each required careful
+                curation to ensure that all associated elements — colors, materials, and
+                furniture — worked cohesively as a unified system.
+              </p>
+
+            </div>
+
+          </section>
+
 
           <section className="initial-concept">
             <div className="header">
               <h2>Initial concept</h2>
-              <p className="body-l--emphasis-high">The initial concept for the Moodboard Generator was a step-based selection flow where users would choose from predefined options to generate a moodboard. The flow included explicit confirmation steps and a summary embedded within the selection process.</p>
+              <p className="body-l--emphasis-high">Early user flow concept defining the initial interaction model</p>
             </div>
             <div className="diagram-surface">
               <img
@@ -31,9 +163,9 @@ function MoodboardGenerator() {
             </div>
           </section>
 
-          <section className="usability-insights">
+          <section className="usability-issues">
             <div className="header">
-              <h2>Iteration & usability insights</h2>
+              <h2>Usability issues identified</h2>
               <p className="body-l--emphasis-high">
                 During the first iteration of the Moodboard tool, several usability frictions were identified through self-testing and mobile-first evaluation.
               </p>
@@ -131,7 +263,7 @@ function MoodboardGenerator() {
 
           <section className="key-learning">
             <div className="header">
-              <h2>Key Learning</h2>
+              <h2>Key learning</h2>
               <p className="body-l--emphasis-high">The key learnings below capture the main UX insights gained from testing, iteration, and design refinement.</p>
             </div>
             <div className="content">
@@ -157,6 +289,42 @@ function MoodboardGenerator() {
               </div>
   
             </div>
+          </section>
+
+          <section className="future-opportunities">
+
+            <div>
+              <h2>Future opportunities</h2>
+            </div>
+
+            <div>
+
+              <p>
+                Future iterations could expand the system beyond guided selection
+                into a more integrated design support platform.
+              </p>
+
+              <p>
+                The library could grow to include a broader range of styles
+                and cross-style combinations,
+                allowing users to explore hybrid directions
+                while maintaining visual coherence.
+              </p>
+
+              <p>
+                By connecting predefined selections with supplier databases,
+                the tool could evolve into a bridge between inspiration and execution —
+                supporting faster quoting and production planning.
+              </p>
+
+              <p>
+                Ultimately, the system could transform from a preference-selection tool
+                into a structured decision framework
+                that streamlines the entire early design phase.
+              </p>
+
+            </div>
+
           </section>
 
 

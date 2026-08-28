@@ -1,0 +1,108 @@
+@use '../../styles/abstracts/functions' as *;
+@use '../../styles/abstracts/variables' as *;
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.introduction__canvas-container {
+  position: relative;
+  width: 100%;
+}
+
+.introduction__canvas-wrapper {
+  background-color: get-color("brand", "dark");
+  height: 200px;
+  border-radius: $radius-lg;
+  // overflow: hidden; // 👈 solo afecta al canvas
+}
+
+// .introduction__canvas3d {
+//   // width: 100%;
+//   // height: 100%;
+// }
+
+.introduction {
+
+
+  &__photo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -78px;
+
+  width: 156px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: get-color("brand", "regular");
+  // z-index: 2;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 94px;
+  }
+
+  &__title {
+    // background-color: red;
+    text-align: center;
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: get-color("text", "secondary");
+  }
+
+  &__description {
+    text-align: center;
+    color: get-color("text", "secondary");
+    max-width: 620px;
+    margin: $space-sm auto;
+    line-height: 1.55rem;
+  }
+}
+
+
+.project-summary {
+  // background-color: pink;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+
+  &__title {
+    // background-color: pink;
+    text-align: center;
+    
+    
+  }
+
+  &__buttons {
+    // background-color: red;
+    display: flex;
+    gap: 20px;
+    height: 48px;
+  }
+
+  &__content {
+    // background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+    gap: 20px;
+    // padding: 20px 0;
+
+    @media(max-width: 1600px) {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;  
+   }
+  }
+}
+
+
+

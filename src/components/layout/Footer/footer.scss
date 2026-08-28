@@ -1,0 +1,39 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/functions' as *;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 0;
+
+&__line {
+  height: 1px;
+  width: 100%;
+  background-color: get-color("border", "subtle");
+  // margin-bottom: 20px;
+}
+
+&__icons {
+  display: flex;
+  flex-direction: row;
+  gap: $space-sm;
+  margin-right: $space-md;
+  margin-left: $space-md;
+}
+
+}
+
+
+.icon-counter {
+  // background-color: grey;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+
+}

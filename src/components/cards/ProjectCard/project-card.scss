@@ -1,0 +1,37 @@
+@use "../../../styles/abstracts/variables.scss" as *;
+
+@use '../../../styles/abstracts/functions' as *;
+@use 'sass:map';
+
+
+.latest-project-card {
+  // background-color: blue;
+  border-radius: $space-sm;
+  min-width: 264px;
+  box-shadow: $raised-md;
+  
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-radius: $space-sm $space-sm 0 0;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    padding: $space-sm;
+
+  }
+
+  &__title {
+    font-size:1.25rem;
+    line-height: 1.4rem;
+  }
+
+  &__description {
+
+    color: get-color("text", "secondary");
+  }
+}

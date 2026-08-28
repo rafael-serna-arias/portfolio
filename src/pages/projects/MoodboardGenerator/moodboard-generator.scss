@@ -1,6 +1,8 @@
 @use '../../../styles/abstracts/variables' as *;
-
+@use '../../../styles/abstracts/maps' as *;
 @use '../../../styles/abstracts/functions' as *;
+
+@use 'sass:map';
 
 .moodboard-layout {
   display: flex;
@@ -8,6 +10,13 @@
   padding-top: $space-xxl;
   gap: $space-xxl;
   padding-bottom: $space-xxl; // POR AHORA
+
+  p {
+    font-size: map.get(map.get($font-sizes, xl), size);
+    line-height: map.get(map.get($font-sizes, xl), line);
+    font-weight: 300;
+  }
+
 }
 
 @media (max-width: 599px) {
@@ -48,13 +57,55 @@
 
 // SECTIONS
 
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  max-width: 820px;
+}
+
+.problem-statement {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  max-width: 820px;
+
+  p {
+  margin-bottom: 1.5rem;
+  }
+}
+
+.user-context {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  max-width: 820px;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.goals-constraints {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  max-width: 820px;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
 .initial-concept {
   display: flex;
   flex-direction: column;
   gap: $space-xl;
 }
 
-.usability-insights {
+.usability-issues {
   display: flex;
   flex-direction: column;
   gap: $space-xl;
@@ -106,6 +157,17 @@
   display: flex;
   flex-direction: column;
   gap: $space-xl;
+}
+
+.future-opportunities {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  max-width: 820px;
+
+  p {
+  margin-bottom: 1.5rem;
+  }
 }
 
 // DIAGRAM STYLES

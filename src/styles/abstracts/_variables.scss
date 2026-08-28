@@ -1,4 +1,11 @@
 
+// Ubicar para poder usar
+    // @use '../../../styles/abstracts/variables' as *;
+
+// Usar mapas en css
+    // font-weight: $font-weight-bold;
+
+
 // SPACING 
 $space-xs: 8px;
 $space-sm: 16px;
@@ -18,3 +25,13 @@ $raised-sm: 0 4px 6px rgba(0, 0, 0, 0.14);
 $raised-md: 0 5px 15px rgba(0, 0, 0, 0.16);
 $overlay-sm: 0 10px 24px rgba(0, 0, 0, 0.18);
 $overlay-lg: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+// FONT-WEIGHTS
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+// TYPOGRAPHY
+$family-text: 'Urbanist';
+$family-display: 'Lexend';

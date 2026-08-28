@@ -1,3 +1,11 @@
+// lINEA PARA PODER USAR LOS MAP.GET
+  // @use 'sass:map';
+
+// USAR LOS MAPAS DENTRO DE CSS
+  // @use '../../../../styles/abstracts/maps' as *;
+  // font-weight: map.get($font-weights, bold);
+
+
 // GRIDS AND BREAKPOINTS
 
 // Breakpoints Map
@@ -58,17 +66,22 @@ $headings: (
 );
 
 $font-sizes: (
+  xl: (size: 1.25rem, line: 1.7),   // 20 / 34
   l: (size: 1rem, line: 1.5),     // 16 / 24
   m: (size: 0.875rem, line: 1.43), // 14 / 20
   s: (size: 0.75rem, line: 1.33),  // 12 / 16
   xs: (size: 0.625rem, line: 1.2)  // 10 / 12
 );
 
+
+// sacar a variables - no usar como mapa
 $font-families: (
   text: 'Urbanist',
   display: 'Lexend'
 );
 
+
+// sacar a variables - no usar como mapa
 $font-weights: (
   regular: 400,
   medium: 500,
