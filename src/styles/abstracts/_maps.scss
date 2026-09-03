@@ -5,6 +5,7 @@
   // @use '../../../../styles/abstracts/maps' as *;
   // font-weight: map.get($font-weights, bold);
 
+  //@use "../../../styles/abstracts/variables.scss" as *;
 
 // GRIDS AND BREAKPOINTS
 
@@ -43,22 +44,22 @@ $columns: (
 
 $headings: (
   h1: (
-    desktop: (size: 3rem, line: 1.2),
-    mobile:  (size: 1.75rem, line: 1.28),
+    desktop: (size: 2.5rem, line: 1.2), // 40 / 48
+    mobile:  (size: 1.75rem, line: 1.3), // 28 / 36
     family: 'Lexend',
     weight: 700,
     
   ),
   h2: (
-    desktop: (size: 2.25rem, line: 1.3),
-    mobile:  (size: 1.5rem, line: 1.33),
+    desktop: (size: 2rem, line: 1.25), // 32 / 40
+    mobile:  (size: 1.5rem, line: 1.35), // 24 / 32 
     family: 'Lexend',
     weight: 700,
     
   ),
   h3: (
-    desktop: (size: 1.75rem, line: 1.4),
-    mobile:  (size: 1.25rem, line: 1.4),
+    desktop: (size: 1.75rem, line: 1.3), // 28 / 36
+    mobile:  (size: 1.25rem, line: 1.4), // 20 / 28
     family: 'Lexend',
     weight: 700,
     
@@ -66,9 +67,9 @@ $headings: (
 );
 
 $font-sizes: (
-  xl: (size: 1.25rem, line: 1.7),   // 20 / 34
+  xl: (size: 1.25rem, line: 1.4),   // 20 / 28
   l: (size: 1rem, line: 1.5),     // 16 / 24
-  m: (size: 0.875rem, line: 1.43), // 14 / 20
+  m: (size: 0.875rem, line: 1.25), // 14 / 20
   s: (size: 0.75rem, line: 1.33),  // 12 / 16
   xs: (size: 0.625rem, line: 1.2)  // 10 / 12
 );

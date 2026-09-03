@@ -6,7 +6,7 @@ import "./Home.scss";
 import { Canvas } from "@react-three/fiber";
 
 // Data
-import { latestProjects } from "./data/LatestProjectCardsData.js";
+import { latestProjects } from "./data/latestProjectCardsData.js";
 
 import { Perf } from 'r3f-perf'
 
@@ -23,9 +23,17 @@ import ProjectModal from "../../components/ui/modals/ProjectModal/ProjectModal.j
 
 function Home() {
 
+  console.log("Home render");
+
   const [cards, setCards] = useState(latestProjects.code);
 
   const [selectedProject, setSelectProject] = useState(null)
+
+  // Estado para controlar la barra de filtro
+
+  const [selectedFiltre, setSelectecFiltre] = useState("front-end")
+
+  const [test, setTest] = useState(false);
   
 
   return (
@@ -91,23 +99,109 @@ function Home() {
 
           <section className="project-summary">
 
-            <p className="project-summary__title font-display text-xl font-medium">Some of my latest projects</p>
+            <p className="project-summary__title">Some of my latest projects</p>
             
-            <div className="project-summary__buttons">
-              <button onClick={() => setCards(latestProjects.code)}>Code</button>
-              <button onClick={ () => setCards(latestProjects.uiux)}>UI/UX</button>
+            <div className="project-summary__project-filters">
+
+              <div className="project-summary__buttons">
+
+                <button 
+                  type="button"
+                  onClick={() => {
+                    
+
+                   setCards(latestProjects.code)
+                   setSelectecFiltre("front-end")
+                  }}
+                  className={`project-summary__front-button ${
+                    selectedFiltre === "front-end"
+                    ? "project-summary__front-button--active"
+                    : ""
+                  }`}
+                >
+                  Front-end
+                </button>
+
+                <button 
+                  type="button"
+                  onClick={ () => {
+                    setCards(latestProjects.uiux)
+                    setSelectecFiltre("ux/ui")
+                  }}
+                  className={`project-summary__ux-button ${
+                    selectedFiltre === "ux/ui"
+                    ? "project-summary__ux-button--active"
+                    : "" 
+                  }`}
+                >
+                  UX / UI
+                </button>
+
+
+
+
+            
+    
+                                
+                <button 
+                  type="button"
+                  onClick={ () => {
+                    setCards(latestProjects.commercialSpaces)
+                    setSelectecFiltre("commercial-spaces")
+                  }}
+                  className={`project-summary__commercial-button ${
+                    selectedFiltre === "commercial-spaces" 
+                    ? "project-summary__commercial-button--active"
+                    : ""
+                  }`}
+            
+                >
+                  Commercial spaces
+                </button>
+              
+              </div>
+
+              <div className="project-summary__underlines-indicator">
+                
+                <div
+                  className={`project-summary__front-bar ${
+                    selectedFiltre === "front-end"
+                    ? "active"
+                    : ""
+                  }`}
+                ></div>
+
+                <div
+                  className={`project-summary__ux-bar ${
+                    selectedFiltre === "ux/ui"
+                    ? "active"
+                    : ""
+                  }`}
+                ></div>
+               
+                <div
+                  className={`project-summary__commercial-spaces ${
+                    selectedFiltre === "commercial-spaces"
+                    ? "active"
+                    : ""
+                  }`}
+                ></div>
+
+              </div>
+              
             </div>
 
             <div className="project-summary__content">
-
               
               {cards.map((item) => {
+
                 if (item.type === "link") {
                   return (
                     <Link
                       key={item.id}
                       to={item.path}
-                      className="project-card-link"     
+                      className="project-card-link"    
+                      target="_blank" 
                     >
                       <ProjectCard
                         {...item}
@@ -121,11 +215,25 @@ function Home() {
                     key={item.id}
                     {...item}
                     onClick={() => setSelectProject(item.id)}
+                    className="project-summary__project-card"
                   />
                 )
               })}
               
             </div>
+
+            {/* <div className="project-summary__content">
+              {cards.map((item) => (
+                <ProjectCard
+                  key={item.id}
+                  {...item}
+                />
+              ))}
+            </div> */}
+
+
+
+
 
           </section>
 

@@ -1,37 +1,75 @@
-@use "../../../styles/abstracts/variables.scss" as *;
+@use "@/styles/abstracts/variables.scss" as *;
+@use "@/styles/abstracts/maps.scss" as *;
 
-@use '../../../styles/abstracts/functions' as *;
+
+@use '@/styles/abstracts/functions' as *;
 @use 'sass:map';
 
 
 .latest-project-card {
-  // background-color: blue;
-  border-radius: $space-sm;
+  display: flex; 
+  flex-direction: column;
+
   min-width: 264px;
+  // max-width: 264px;
+  
+  border-radius: $space-sm;
   box-shadow: $raised-md;
+
+  img {
+    // width: 100%;
+    // height: auto;
+    // display: block;
+    
+    border-radius: $space-sm $space-sm 0 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    // object-fit: cover;
+
+  }
   
 
-  &__img {
-    width: 100%;
-    height: auto;
-    border-radius: $space-sm $space-sm 0 0;
-  }
-
   &__texts {
+    // background-color: antiquewhite;
+
     display: flex;
     flex-direction: column;
-    gap: $space-xs;
+    gap: 8px;
     padding: $space-sm;
 
+    p:first-child {
+      font-family: $family-display;
+      font-weight: $weight-bold;
+      font-size: font-size(xl);
+      line-height: line-height(xl);
+    }    
   }
 
-  &__title {
-    font-size:1.25rem;
-    line-height: 1.4rem;
+  &__bottom {
+    // background-color: red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+     p:first-child {
+      font-size: font-size(xs);
+      line-height: line-heiht(xs);
+      font-weight: $weight-semibold;
+      color: get-color(text, secondary);
+      font-family: $family-text;
+    }
   }
 
-  &__description {
-
-    color: get-color("text", "secondary");
+  &__icons {
+    display: flex;
+    gap: 8px;
   }
+}
+
+.card-image-test {
+
+  background-color: red;
+  width: 100%;
+  height: 200px;
 }

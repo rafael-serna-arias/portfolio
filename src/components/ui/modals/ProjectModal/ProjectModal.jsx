@@ -14,6 +14,8 @@ export default function ProjectModal ({project, onClose}) {
     // Bloquea el scroll de la página cuando hay un modal abierto
     useEffect(() => {
 
+       
+
         document.body.style.overflow = isModalOpen
         ? 'hidden'
         : ''
@@ -31,8 +33,7 @@ export default function ProjectModal ({project, onClose}) {
     
 
 
-     return (
-        
+     return (        
 
         <div className="project-modal grid">   
             
@@ -80,7 +81,7 @@ export default function ProjectModal ({project, onClose}) {
                     </div>
 
                     <div className="project-modal__buttons">
-                        <a className="project-modal__button project-modal__button--primary" href={currentProject.liveUrl}>
+                        <a className="project-modal__button project-modal__button--primary" href={currentProject.liveUrl} target="_blank">
                             <VercelIcon />
                             View live project
                         </a>
@@ -92,11 +93,7 @@ export default function ProjectModal ({project, onClose}) {
                 </div>
                
                
-               
-                {/* <div className="prueba2" >
-
-                 </div>   */}
-                
+                         
             </div>
         </div>
     )

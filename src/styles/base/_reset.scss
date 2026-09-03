@@ -28,6 +28,7 @@ button, input, textarea, select {
   border: none;        // Elimina bordes por defecto
   background: none;    // Elimina fondos nativos (útil en botones e inputs)
   outline: none;       // Elimina el contorno azul por defecto al enfocar (⚠️ luego reemplazar con estilo accesible)
+  color: inherit;
 }
 
 // Listas sin viñetas o numeración

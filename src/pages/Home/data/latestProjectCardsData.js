@@ -1,10 +1,33 @@
 // Images
 // import codeGeneratorImage from "@/assets/images/home/code-moodboard.png";
 import codeGeneratorImage from "@/assets/images/home/code-moodboard_2.png";
+import walletExperienceImage from '@/assets/images/home/wall-experience.png'
+import realStateExperienceImage from '@/assets/images/home/real-state.png'
 
-import imagePlaceholder from "@/assets/images/home/image-placeholder.png"
 
-// UI icons
+
+import uiStyleGuide from '@/assets/images/home/ui-style.png'
+import uiCaseStudy from '@/assets/images/home/ux-case.png'
+
+import maxTikoImage from '@/assets/images/home/max-tiko.png'
+import heroesImage from '@/assets/images/home/heroes.png'
+import localChipsImage from '@/assets/images/home/local-chips.png'
+import saharaImage from '@/assets/images/home/sahara.png'
+
+
+
+
+
+// icons
+import jsIcon from "@/assets/icons/js-icon.svg"
+import sassIcon from "@/assets/icons/sass-icon.svg"
+import reactIcon from "@/assets/icons/react-icon.svg"
+import threeIcon from "@/assets/icons/three-icon.svg"
+import figmaIcon from "@/assets/icons/figma-icon.svg"
+import maxIcon from "@/assets/icons/3dsmax-icon.svg"
+import rhinocerosIcon from "@/assets/icons/rhinoceros-icon.svg"
+import vrayIcon from "@/assets/icons/vray-icon.svg"
+
 
 
 
@@ -16,37 +39,120 @@ export const latestProjects = {
       title: "Moodboard Generator",
       description: "Interior styling tool",
       type: "modal",
+      icons: [
+        jsIcon,
+        sassIcon
+      ]
     },
     {
-      id: "2",
-      image: imagePlaceholder,
-      title: "Moodboard Generator",
-      description: "Interior styling tool",
+      id: "walletExperience",
+      image: walletExperienceImage,
+      title: "Wallet Experience",
+      description: "Product Motion Experience",
       type: "modal",
+      icons: [
+        reactIcon,
+        threeIcon,
+        sassIcon
+      ]
     },
         {
-      id: "3",
-      image: imagePlaceholder,
-      title: "Moodboard Generator",
-      description: "Interior styling tool",
+      id: "realStateExperience",
+      image: realStateExperienceImage,
+      title: "Real state experience",
+      description: "Real Estate Web Experience",
       type: "modal",
+      icons: [
+        reactIcon,
+        threeIcon,
+        sassIcon
+      ]
     },
-        {
-      id: "4",
-      image: imagePlaceholder,
-      title: "Moodboard Generator",
-      description: "Interior styling tool",
-      type: "modal",
-    },
+        
   ],
 
   uiux: [
     {
-      id: "ux",
-      image: imagePlaceholder,
-      title: "prueba",
+      id: "uxStyleGuide",
+      image: uiStyleGuide,
+      title: "UI style guide",
+      description: "Personal portfolio",
       path: "/projects/moodboardgenerator",
       type: "link",
+      icons: [
+        figmaIcon,
+      ]
+    },
+    {
+      id: "uiCaseStudy",
+      image: uiCaseStudy,
+      title: "UX case study",
+      description: "Moodboard generator",
+      path: "/projects/moodboardgenerator",
+      type: "link",
+      icons: [
+        figmaIcon,
+      ]
     }
+  ],
+
+  commercialSpaces: [
+    {
+      id: "maxTiko",
+      image: maxTikoImage,
+      title: "Fast food restaurant",
+      description: "Villa garzón - Putumayo",
+      
+      type: "modal",
+      icons: [
+        maxIcon,
+        rhinocerosIcon,
+        vrayIcon,
+      ]
+    },
+    {
+      id: "heroes",
+      image: heroesImage,
+      title: "Ice cream shop",
+      description: "Palmira - valle del cauca",
+      
+      type: "modal",
+      icons: [
+        maxIcon,
+        rhinocerosIcon,
+        vrayIcon,
+      ]
+    },
+    {
+      id: "localChips",
+      image: localChipsImage,
+      title: "Fast food restaurant",
+      description: "Cali - Valle del cauca",
+      
+      type: "modal",
+      icons: [
+        maxIcon,
+        rhinocerosIcon,
+        vrayIcon,
+      ]
+    },
+    {
+      id: "sahara",
+      image: saharaImage,
+      title: "Bakery",
+      description: "Cali - Valle del cauca",
+      
+      type: "modal",
+      icons: [
+        maxIcon,
+        rhinocerosIcon,
+        vrayIcon,
+      ]
+    },
+
+
+
+
+
   ]
 }
