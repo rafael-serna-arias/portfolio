@@ -61,7 +61,6 @@ export default function ProjectModal ({project, onClose}) {
                         <p>{currentProject.role}</p>
                         <p>{currentProject.fecha}</p>
                     </div>
-
                 </div>
 
                 <div className="project-modal__image">

@@ -27,6 +27,8 @@ import figmaIcon from "@/assets/icons/figma-icon.svg"
 import maxIcon from "@/assets/icons/3dsmax-icon.svg"
 import rhinocerosIcon from "@/assets/icons/rhinoceros-icon.svg"
 import vrayIcon from "@/assets/icons/vray-icon.svg"
+import blenderIcon from "@/assets/icons/blender-icon.svg"
+
 
 
 
@@ -38,7 +40,9 @@ export const latestProjects = {
       image: codeGeneratorImage,
       title: "Moodboard Generator",
       description: "Interior styling tool",
+
       type: "modal",
+      modalType: "front-end-modal",
       icons: [
         jsIcon,
         sassIcon
@@ -49,11 +53,13 @@ export const latestProjects = {
       image: walletExperienceImage,
       title: "Wallet Experience",
       description: "Product Motion Experience",
+
       type: "modal",
+      modalType: "front-end-modal",
       icons: [
         reactIcon,
         threeIcon,
-        sassIcon
+        blenderIcon
       ]
     },
         {
@@ -61,11 +67,13 @@ export const latestProjects = {
       image: realStateExperienceImage,
       title: "Real state experience",
       description: "Real Estate Web Experience",
+
       type: "modal",
+      modalType: "front-end-modal",
       icons: [
         reactIcon,
         threeIcon,
-        sassIcon
+        blenderIcon
       ]
     },
         
@@ -77,7 +85,8 @@ export const latestProjects = {
       image: uiStyleGuide,
       title: "UI style guide",
       description: "Personal portfolio",
-      path: "/projects/moodboardgenerator",
+      path: "/projects/styleGuide",
+
       type: "link",
       icons: [
         figmaIcon,
@@ -89,6 +98,7 @@ export const latestProjects = {
       title: "UX case study",
       description: "Moodboard generator",
       path: "/projects/moodboardgenerator",
+
       type: "link",
       icons: [
         figmaIcon,
@@ -104,6 +114,7 @@ export const latestProjects = {
       description: "Villa garzón - Putumayo",
       
       type: "modal",
+      modalType: "commercial-spaces-modal",
       icons: [
         maxIcon,
         rhinocerosIcon,
@@ -117,6 +128,7 @@ export const latestProjects = {
       description: "Palmira - valle del cauca",
       
       type: "modal",
+      modalType: "commercial-spaces-modal",
       icons: [
         maxIcon,
         rhinocerosIcon,
@@ -130,6 +142,7 @@ export const latestProjects = {
       description: "Cali - Valle del cauca",
       
       type: "modal",
+      modalType: "commercial-spaces-modal",
       icons: [
         maxIcon,
         rhinocerosIcon,
@@ -143,6 +156,7 @@ export const latestProjects = {
       description: "Cali - Valle del cauca",
       
       type: "modal",
+      modalType: "commercial-spaces-modal",
       icons: [
         maxIcon,
         rhinocerosIcon,

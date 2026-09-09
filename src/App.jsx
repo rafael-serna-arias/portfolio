@@ -30,7 +30,7 @@ function App() {
               element={<CoffeeExperience />}
             />      
             <Route
-              path="/styleguide"
+              path="/projects/styleGuide"
               element={<StyleGuide />}
             />
     </Routes>

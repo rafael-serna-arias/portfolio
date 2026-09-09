@@ -1,0 +1,55 @@
+
+
+@use '../../../../styles/abstracts/functions' as *;
+@use '../../../../styles/abstracts/maps' as *;
+@use '../../../../styles/abstracts/variables' as *;
+
+
+// Los estilos se comparten con projectModal
+// definidos en project-modal.scss
+ 
+
+
+
+
+.commercial-modal {
+
+   &__image {
+      padding: 0 40px;
+
+      @media(max-width: 599px) {
+         padding: 0;
+      }
+   }
+
+  &__image img {
+   border-radius: 32px;
+  }
+
+  &__content {
+   // background-color: red;
+   display: flex;
+   flex-direction: column;
+   gap: 32px;
+
+   p:first-of-type{
+      // background-color: darkgreen;
+      // padding: 0 40px;
+      max-width: 420px;
+      margin-left: 40px;
+      // font-weight: 500;
+      font-size: font-size(m);
+      line-height: line-height(m);
+      // line-height: 1.25;
+      // line-height: 20px;
+      color: get-color(text, secondary);
+
+      @media(max-width: 599px) {
+         margin-left: 0px;
+      }
+   }
+  
+  }
+
+
+}

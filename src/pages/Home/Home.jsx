@@ -19,11 +19,12 @@ import Experience from "@/components/experience/Experience.jsx";
 
 import { Text } from "@react-three/drei"
 import ProjectModal from "../../components/ui/modals/ProjectModal/ProjectModal.jsx";
+import CommercialModal from "../../components/ui/modals/CommercialModal/CommercialModal.jsx";
 
 
 function Home() {
 
-  console.log("Home render");
+  
 
   const [cards, setCards] = useState(latestProjects.code);
 
@@ -33,8 +34,13 @@ function Home() {
 
   const [selectedFiltre, setSelectecFiltre] = useState("front-end")
 
-  const [test, setTest] = useState(false);
-  
+
+  // Esto es para saber que tipo de modal se va a imprimir. 
+  const currentProject = cards.find(
+    (item) => item.id === selectedProject
+  );
+
+  // console.log(currentProject.modalType)
 
   return (
     <main className="grid">
@@ -43,18 +49,6 @@ function Home() {
 
           <Header />
 
-          {/* <Link to="/projects/moodboardgenerator">
-            Go to Moodboard Generator
-          </Link>
-
-          <Link to="/projects/coffeeexperience">
-            Go to Coffee Shop 
-          </Link>      
-
-          <Link to="/styleguide">
-            Go to Styles Guide
-          </Link> */}
-        
 
           <section className="introduction">
 
@@ -99,7 +93,7 @@ function Home() {
 
           <section className="project-summary">
 
-            <p className="project-summary__title">Some of my latest projects</p>
+            <p className="project-summary__title">Some of my work</p>
             
             <div className="project-summary__project-filters">
 
@@ -107,9 +101,7 @@ function Home() {
 
                 <button 
                   type="button"
-                  onClick={() => {
-                    
-
+                  onClick={() => {               
                    setCards(latestProjects.code)
                    setSelectecFiltre("front-end")
                   }}
@@ -121,6 +113,8 @@ function Home() {
                 >
                   Front-end
                 </button>
+
+
 
                 <button 
                   type="button"
@@ -138,11 +132,7 @@ function Home() {
                 </button>
 
 
-
-
-            
-    
-                                
+                              
                 <button 
                   type="button"
                   onClick={ () => {
@@ -154,12 +144,16 @@ function Home() {
                     ? "project-summary__commercial-button--active"
                     : ""
                   }`}
-            
                 >
-                  Commercial spaces
+                  Spaces
                 </button>
               
               </div>
+
+
+
+
+
 
               <div className="project-summary__underlines-indicator">
                 
@@ -181,7 +175,7 @@ function Home() {
                
                 <div
                   className={`project-summary__commercial-spaces ${
-                    selectedFiltre === "commercial-spaces"
+                    selectedFiltre === "commercial-paces"
                     ? "active"
                     : ""
                   }`}
@@ -190,6 +184,9 @@ function Home() {
               </div>
               
             </div>
+
+
+
 
             <div className="project-summary__content">
               
@@ -201,11 +198,9 @@ function Home() {
                       key={item.id}
                       to={item.path}
                       className="project-card-link"    
-                      target="_blank" 
+                      // target="_blank" 
                     >
-                      <ProjectCard
-                        {...item}
-                      />
+                      <ProjectCard {...item} />
                     </Link>
                   )
                 }  
@@ -222,25 +217,30 @@ function Home() {
               
             </div>
 
-            {/* <div className="project-summary__content">
-              {cards.map((item) => (
-                <ProjectCard
-                  key={item.id}
-                  {...item}
-                />
-              ))}
-            </div> */}
-
-
-
 
 
           </section>
 
-          <ProjectModal 
-            project={selectedProject}
-            onClose={() => setSelectProject(null)}
-          />
+          
+          {selectedProject && 
+            <>
+              {currentProject.modalType === "commercial-spaces-modal"
+                ? 
+                    <CommercialModal
+                      project={selectedProject}
+                      onClose={() => setSelectProject(null)}
+                    />
+                  
+                : 
+                    <ProjectModal
+                      project={selectedProject}
+                      onClose={() => setSelectProject(null)}
+                    />
+                  
+              }
+            </>
+          }
+
         
           <Footer />
 

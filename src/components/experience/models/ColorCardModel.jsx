@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react"
+
 import { useControls } from "leva"
+
 import { useGLTF, useTexture } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import * as THREE from "three"
@@ -60,7 +62,7 @@ export default function ColorCardModel(props) {
 
     scale: {
       value: 2
-    }
+    }, 
 
   })
 

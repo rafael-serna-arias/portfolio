@@ -63,13 +63,19 @@ $headings: (
     family: 'Lexend',
     weight: 700,
     
+  ),
+  h4: (
+    desktop: (size:1.5rem, line:1.35 ),
+    mobile: (size:1.5rem, line:1.35 ),
+    family: 'lexend',
+    weight: 700,
   )
 );
 
 $font-sizes: (
   xl: (size: 1.25rem, line: 1.4),   // 20 / 28
   l: (size: 1rem, line: 1.5),     // 16 / 24
-  m: (size: 0.875rem, line: 1.25), // 14 / 20
+  m: (size: 0.875rem, line: 1.43), // 14 / 20
   s: (size: 0.75rem, line: 1.33),  // 12 / 16
   xs: (size: 0.625rem, line: 1.2)  // 10 / 12
 );
