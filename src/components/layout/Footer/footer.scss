@@ -2,10 +2,32 @@
 @use '../../../styles/abstracts/functions' as *;
 
 .footer {
+  // background-color: rgb(174, 235, 174);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 40px 0;
+  // flex-direction: row;
+  flex-direction: column;
+  // align-items: center;
+  // padding: 40px 0;
+  // height: 48px;
+  gap: 8px;
+
+  &__top {
+    // background-color: darkcyan;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__bot {
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    line-height: 16px;
+    color: get-color(text, secondary);
+  }
 
 &__line {
   height: 1px;
@@ -36,4 +58,6 @@
 
   font-size: 24px;
 
+  transition: transform 200ms ease;
+  &:hover { transform: scale(1.2);}
 }

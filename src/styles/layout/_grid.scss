@@ -5,13 +5,18 @@
 // Esto crea un @media para cada mid-with segun su respectiva divisón
 /*Resultado .grid each*/
 .grid {
+  // background-color: fuchsia;
   display: grid;
-
+ 
   @each $breakpoint, $columns in $grid-columns { // Esto funciona como un bucle clave  → valor en grid-columns
     @include respond-to($breakpoint) { // @include llama al mixin con el nombre respond-to
       grid-template-columns: $columns;
     }
   }
+}
+
+.grid > * {
+  grid-column: 2 / 3;
 }
 
 .grid-full {

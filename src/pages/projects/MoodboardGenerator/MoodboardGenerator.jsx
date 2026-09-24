@@ -11,8 +11,8 @@ import initialflow from "@/assets/images/projects/moodboard-generator/initial-fl
 
 function MoodboardGenerator() {
   return (
-    <main className="grid">
-      <div className="page__content">
+    <div className="grid">
+     
         <div className="moodboard-layout">
 
           <h1>UX case study</h1>
@@ -332,9 +332,9 @@ function MoodboardGenerator() {
        
        
         </div>
-      </div>
+      
     
-    </main>
+    </div>
   );
 }
 

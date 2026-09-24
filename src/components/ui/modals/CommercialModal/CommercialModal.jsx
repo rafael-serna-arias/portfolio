@@ -7,7 +7,7 @@ import {commercialModalData} from './commercialModalData.js'
 export default function CommercialModal ({project, onClose}) {
 
     const currentProject = commercialModalData[project]
-    console.log(currentProject)
+
 
     return ( 
         <div className='project-modal grid'>

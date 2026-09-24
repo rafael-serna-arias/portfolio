@@ -20,6 +20,7 @@ import { variantConfig } from "./data/colorCardsData.js";
 // ─────────────────────────────────────
 
 function InterfaceColor({ colors }) {
+  
   const { regular, light, dark } = colors;
 
   return (

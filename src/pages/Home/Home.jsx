@@ -12,7 +12,7 @@ import { Perf } from 'r3f-perf'
 
 import ProjectCard from "@/components/cards/ProjectCard/ProjectCard.jsx";
 import Footer from "@/components/layout/Footer/Footer.jsx";
-import Header from "@/components/layout/header/Header.jsx";
+
 import Experience from "@/components/experience/Experience.jsx";
 
 
@@ -20,6 +20,7 @@ import Experience from "@/components/experience/Experience.jsx";
 import { Text } from "@react-three/drei"
 import ProjectModal from "../../components/ui/modals/ProjectModal/ProjectModal.jsx";
 import CommercialModal from "../../components/ui/modals/CommercialModal/CommercialModal.jsx";
+import Navbar from "../../components/layout/Navbar/Navbar.jsx";
 
 
 function Home() {
@@ -44,13 +45,10 @@ function Home() {
 
   return (
     <main className="grid">
-      <div className="page__content">
-        <div className="home">
-
-          <Header />
-
-
-          <section className="introduction">
+      
+        <div className="home">    
+          
+          <div className="introduction">
 
             <div className="introduction__canvas-container">
 
@@ -87,7 +85,7 @@ function Home() {
               <p className="introduction__description text-m">Rafcelot is a freelance designer and front-end developer based in Cali, passionate about crafting digital experiences that blend functionality with visual impact.</p>
             </div>
 
-          </section>
+          </div>
 
 
 
@@ -175,7 +173,7 @@ function Home() {
                
                 <div
                   className={`project-summary__commercial-spaces ${
-                    selectedFiltre === "commercial-paces"
+                    selectedFiltre === "commercial-spaces"
                     ? "active"
                     : ""
                   }`}
@@ -197,7 +195,7 @@ function Home() {
                     <Link
                       key={item.id}
                       to={item.path}
-                      className="project-card-link"    
+                      className="project-summary__project-card"    
                       // target="_blank" 
                     >
                       <ProjectCard {...item} />
@@ -242,13 +240,13 @@ function Home() {
           }
 
         
-          <Footer />
+         
 
         </div>
 
         
 
-      </div>
+      
  
       
 

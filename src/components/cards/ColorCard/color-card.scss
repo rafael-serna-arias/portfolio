@@ -1,7 +1,15 @@
 @use "../../../styles/abstracts/variables.scss" as *;
 
+.cards-grid {
+  // background-color: red;
+  padding: 12px;
+
+}
 
 .color-card {
+  // background-color: firebrick;
+  
+
   display: flex;
   flex-direction: column;
   gap: $space-sm;
@@ -9,8 +17,9 @@
   justify-content: space-between; // esto me permite que cuando el texto sea mayor se distribuya mejor el espacio.
 
   padding-top: $space-md;
-  box-shadow: $overlay-lg;
+  box-shadow: $raised-sm;
   border-radius: $radius-lg;
+  
 
   &__header{
     // background-color: pink;

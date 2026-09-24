@@ -1,0 +1,124 @@
+@use '../../styles/abstracts/functions' as *;
+@use '../../styles/abstracts/variables' as *;
+
+
+
+.work {
+
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    &__texts {
+        // background-color: red;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        padding: 0 12px;
+
+        > p:first-of-type {
+            max-width: 450px;
+            color: get-color(text, secondary);
+        }
+    }
+
+    &__main-projects {
+        // background-color: palegoldenrod;
+      
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+
+    &__projets-container {
+        // background-color: blue;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 0 12px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 32px;
+        height: 40px;
+
+        padding: 0 12px;
+
+        font-family: $family-display;
+        font-size: 14px;
+        line-height: 20px;
+        color: get-color(text, secondary);
+        font-weight: 400;
+    }
+
+    &__button {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &--active {
+            font-weight: 700;
+            transform: scale(1.05);
+            color: get-color(brand, regular);
+            cursor: pointer;
+        }
+
+    }
+
+    
+    &__underlines-indicator {
+        position: relative;   
+
+    }
+
+
+    &__all-bar {        
+        &.active {
+            background-color: get-color(brand, regular);
+            height: 2px;
+            width: 45px;
+            position: absolute;
+        }
+    }
+
+    
+    &__front-bar {
+        &.active {
+            background-color: get-color(brand, regular);
+            height: 2px;
+            width: 99px;           
+
+            position: absolute;
+            left: 45px;
+        }
+    }
+
+        
+    &__ux-bar {
+        &.active {
+            background-color: get-color(brand, regular);
+            height: 2px;
+            width: 82px;           
+
+            position: absolute;
+            left: 144px;
+        }
+    }
+
+    &__spaces-bar {
+        &.active {
+            background-color: get-color(brand, regular);
+            height: 2px;
+            width: 81px;           
+
+            position: absolute;
+            left: 226px;
+        }
+    }
+
+
+
+}

@@ -37,11 +37,14 @@
     gap: 8px;
     padding: $space-sm;
 
-    p:first-child {
+    > p:first-child {
+      // background-color: red;
       font-family: $family-display;
       font-weight: $weight-bold;
       font-size: font-size(xl);
       line-height: line-height(xl);
+
+      text-align: left;
     }    
   }
 

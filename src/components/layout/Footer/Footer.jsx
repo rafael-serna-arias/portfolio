@@ -11,28 +11,26 @@ const socialIcons = [faXTwitter, faLinkedin, faCodepen, faGithub, ];
 
 function Footer() {
   return (
-   <div className="footer">
-    <div className="footer__line"></div>
-    <div className="footer__icons">
+  <div className="footer">
 
-      {socialIcons.map((icon, index) => (
-        <div className="icon-counter" key={index}>
-          <FontAwesomeIcon icon={icon}/>
-        </div>
-      ))}
+    <div className="footer__top">
+      <div className="footer__line"></div>
+      <div className="footer__icons">
 
+          {socialIcons.map((icon, index) => (
+            <div className="icon-counter" key={index}>
+              <FontAwesomeIcon icon={icon}/>
+            </div>
+          ))}
 
-      {/* <div className="icon-counter">
-        <FontAwesomeIcon icon={faXTwitter} />
       </div>
-      <div className="icon-counter"></div>
-      <div className="icon-counter"></div>
-      <div className="icon-counter"></div> */}
-
-
+      <div className="footer__line"></div>
     </div>
-    <div className="footer__line"></div>
-   </div>
+    
+    <div className="footer__bot">
+     <p>© 2026 Rafael Serna.</p>
+    </div>
+  </div>
   )    
 };
 

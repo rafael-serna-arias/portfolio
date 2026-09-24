@@ -1,0 +1,128 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/functions" as *;
+
+
+
+.contact {
+    grid-column: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    margin-top: 24px;
+
+    &__content {
+        // background-color: rgb(255, 219, 219);
+        padding: 0 12px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        // > h1:first-child {
+        //     font-size: 48px;
+        // }
+
+        div:first-of-type {
+            color: get-color(text, secondary);
+        }
+    }
+
+    &__container-form {
+        // background-color: aquamarine;
+        padding-top: 96px;
+        padding-bottom: 24px;
+
+        position: relative;
+    }
+
+    &__form {
+        // background-color: rgb(114, 13, 77);
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+
+        padding: 96px 48px 24px 48px;
+        box-shadow: $raised-md;
+        border-radius: 32px;
+
+        @media(max-width: 1440px) {
+            padding: 96px 24px 24px 24px;
+
+        }
+        
+    }
+
+    .contact__photo {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        border-radius: 50%;
+        // object-fit: cover;
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__top-option {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+
+        @media(max-width: 1440px) {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+     
+    }
+
+    &__option textarea {
+       
+        min-height: 259px;
+    }
+
+    &__bot-option {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__option {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__submit {
+        background-color: get-color(brand, dark);
+        color: white;
+        width: fit-content;
+        height: 48px;
+        border-radius: 16px;
+        padding: 0 24px;
+
+        @media(max-width: 904px) {
+            width: 100%;
+        }
+    }
+
+
+}
+
+
+
+

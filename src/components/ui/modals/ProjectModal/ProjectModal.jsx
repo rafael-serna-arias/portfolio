@@ -29,9 +29,13 @@ export default function ProjectModal ({project, onClose}) {
 
     if (project === null) return null
 
+
+
     const currentProject = projectModalData[project]
     
-
+    // const currentProject = allProjects.find(
+    // (item) => item.id === selectedProject
+    // )
 
      return (        
 
@@ -46,12 +50,12 @@ export default function ProjectModal ({project, onClose}) {
             <div className="project-modal__container">
 
                 
-                    <button 
-                        className="project-modal__close-button"
-                        onClick={onClose}
-                    >
-                            <CloseIcon />
-                    </button>
+                <button 
+                    className="project-modal__close-button"
+                    onClick={onClose}
+                >
+                        <CloseIcon />
+                </button>
                 
 
                 <div className="project-modal__header">

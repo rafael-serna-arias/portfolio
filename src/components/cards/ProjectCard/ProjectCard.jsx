@@ -14,7 +14,7 @@ export default function ProjectCard({
 
 
   return (
-    <div
+    <button
       className={`latest-project-card ${className}` }
       onClick={onClick}
     >
@@ -37,9 +37,7 @@ export default function ProjectCard({
                     src={icon}
                     alt=""
                   />
-
-                  // <div className="card-image-test"></div>
-
+              
                 )                
               })}
             </div>      
@@ -48,7 +46,7 @@ export default function ProjectCard({
        
       </div>
 
-    </div>
+    </button>
   )
   
 }
