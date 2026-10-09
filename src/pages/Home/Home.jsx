@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Suspense, useState } from "react";
 
-import "./Home.scss";
+import "./home.scss";
 
 import { Canvas } from "@react-three/fiber";
 
