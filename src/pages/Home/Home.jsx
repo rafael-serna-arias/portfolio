@@ -22,6 +22,7 @@ import ProjectModal from "../../components/ui/modals/ProjectModal/ProjectModal.j
 import CommercialModal from "../../components/ui/modals/CommercialModal/CommercialModal.jsx";
 import Navbar from "../../components/layout/Navbar/Navbar.jsx";
 
+import contactImage from "@/assets/images/home/myself.png";
 
 function Home() {
 
@@ -32,7 +33,6 @@ function Home() {
   const [selectedProject, setSelectProject] = useState(null)
 
   // Estado para controlar la barra de filtro
-
   const [selectedFiltre, setSelectecFiltre] = useState("front-end")
 
 
@@ -48,13 +48,14 @@ function Home() {
       
         <div className="home">    
           
-          <div className="introduction">
+          <div className="home__introduction">
 
-            <div className="introduction__canvas-container">
 
-              <div className="introduction__canvas-wrapper">
-              
-                <Canvas  className="introduction__canvas3d">
+            
+            <div className="home__canvas-container">
+              <div className="home__canvas-wrapper">   
+
+                <Canvas  className="home__canvas3d">
                   {/* <Perf position="top-left"/> */}
 
                   <Suspense
@@ -72,47 +73,46 @@ function Home() {
                   </Suspense>
                   
                 </Canvas>
-
+                
               </div>
-
-              <div className="introduction__photo"></div>
+              
+              <img className="home__photo" src={contactImage} alt="" />
+              {/* <div className="introduction__photo"></div> */}
             </div> 
 
 
-            <div className="introduction__texts">
-              <h2 className="introduction__title">Rafael Serna Arias</h2>
-              <p className="introduction__subtitle font-display font-bold ">Designer / Coder</p>
-              <p className="introduction__description text-m">Rafcelot is a freelance designer and front-end developer based in Cali, passionate about crafting digital experiences that blend functionality with visual impact.</p>
+
+            <div className="home__texts">
+              <h2>Rafael Serna Arias</h2>
+              <p>Designer / Coder</p>
+              <p>Rafcelot is a freelance designer and front-end developer based in Cali, passionate about crafting digital experiences that blend functionality with visual impact.</p>
             </div>
 
           </div>
 
 
 
-          <section className="project-summary">
+          <section className="home__project-summary">
 
-            <p className="project-summary__title">Some of my work</p>
+            <p>Some of my work</p>
             
-            <div className="project-summary__project-filters">
+            <div className="home__project-filters">
 
-              <div className="project-summary__buttons">
-
+              <div className="home__buttons">
                 <button 
                   type="button"
                   onClick={() => {               
                    setCards(latestProjects.code)
                    setSelectecFiltre("front-end")
                   }}
-                  className={`project-summary__front-button ${
+                  className={`home__button ${
                     selectedFiltre === "front-end"
-                    ? "project-summary__front-button--active"
+                    ? "home__button--active"
                     : ""
                   }`}
                 >
                   Front-end
                 </button>
-
-
 
                 <button 
                   type="button"
@@ -120,16 +120,14 @@ function Home() {
                     setCards(latestProjects.uiux)
                     setSelectecFiltre("ux/ui")
                   }}
-                  className={`project-summary__ux-button ${
+                  className={`home__button ${
                     selectedFiltre === "ux/ui"
-                    ? "project-summary__ux-button--active"
+                    ? "home__button--active"
                     : "" 
                   }`}
                 >
                   UX / UI
                 </button>
-
-
                               
                 <button 
                   type="button"
@@ -137,26 +135,20 @@ function Home() {
                     setCards(latestProjects.commercialSpaces)
                     setSelectecFiltre("commercial-spaces")
                   }}
-                  className={`project-summary__commercial-button ${
+                  className={`home__button ${
                     selectedFiltre === "commercial-spaces" 
-                    ? "project-summary__commercial-button--active"
+                    ? "home__button--active"
                     : ""
                   }`}
                 >
                   Spaces
-                </button>
-              
+                </button>              
               </div>
 
 
-
-
-
-
-              <div className="project-summary__underlines-indicator">
-                
+              <div className="home__underlines-indicator">                
                 <div
-                  className={`project-summary__front-bar ${
+                  className={`home__front-bar ${
                     selectedFiltre === "front-end"
                     ? "active"
                     : ""
@@ -164,7 +156,7 @@ function Home() {
                 ></div>
 
                 <div
-                  className={`project-summary__ux-bar ${
+                  className={`home__ux-bar ${
                     selectedFiltre === "ux/ui"
                     ? "active"
                     : ""
@@ -172,21 +164,21 @@ function Home() {
                 ></div>
                
                 <div
-                  className={`project-summary__commercial-spaces ${
+                  className={`home__commercial-spaces ${
                     selectedFiltre === "commercial-spaces"
                     ? "active"
                     : ""
                   }`}
                 ></div>
-
               </div>
+
               
             </div>
 
 
 
 
-            <div className="project-summary__content">
+            <div className="home__cards-container">
               
               {cards.map((item) => {
 
@@ -195,7 +187,7 @@ function Home() {
                     <Link
                       key={item.id}
                       to={item.path}
-                      className="project-summary__project-card"    
+                      className="home__project-card"    
                       // target="_blank" 
                     >
                       <ProjectCard {...item} />
@@ -208,7 +200,7 @@ function Home() {
                     key={item.id}
                     {...item}
                     onClick={() => setSelectProject(item.id)}
-                    className="project-summary__project-card"
+                    className="home__project-card"
                   />
                 )
               })}

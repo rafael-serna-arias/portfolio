@@ -4,189 +4,110 @@
 
 @use 'sass:map';
 
-.moodboard-layout {
+.ux-case {
   // background-color: blue;
+ width: 100%;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  padding-top: $space-xxl;
-  gap: $space-xxl;
-  padding-bottom: $space-xxl; // POR AHORA
+  flex-direction: column;  
+  gap: 48px;
+
+  padding: 24px;
+
+  > h1 {    
+  text-align: left;
+  }
+
+  @media(max-width: 904px) {
+    padding: 0;
+  }
+
+
+  &__button{
+
+    margin: 24px;
+
+  }
 
   p {
-    font-size: map.get(map.get($font-sizes, xl), size);
+    font-size: 16px;
     line-height: map.get(map.get($font-sizes, xl), line);
-    font-weight: 300;
+   
+    color: get-color(text, secondary);
   }
 
-}
 
-@media (max-width: 599px) {
-  .moodboard-layout {
-    padding-top: 24px;
-    gap: $space-lg;
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+     width: 100%;
+    max-width: 600px;
+  
+  //  margin-inline: auto;
+
+    > h2 {
+      font-size: 24px;
+    }
+
+    > ul {
+      color: get-color(text, secondary);
+      font-family: $family-text;
+      line-height: 24px;
+    
+    }
   }
-}
 
-.section-header {
-  display: flex;
-  flex-direction: column;
-  gap: $space-xs;
-}
-
-// HEADER
-.header {
-  display: flex;  
-  flex-direction: column;
-  gap: $space-sm;
-  max-width: 700px;
-}
-
-// CONTENT
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: $space-xl;
-  padding-left: $space-md;
+  &__content {
+    // background-color: red;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
   &__items {
     display: flex;
     flex-direction: column;
-    gap: $space-sm;
+    gap: 4px;
     max-width: 700px;
   }
-}
 
-// SECTIONS
 
-.overview {
-  display: flex;
-  flex-direction: column;
-  gap: $space-md;
-  max-width: 820px;
-}
-
-.problem-statement {
-  display: flex;
-  flex-direction: column;
-  gap: $space-md;
-  max-width: 820px;
-
-  p {
-  margin-bottom: 1.5rem;
+  &__image-container {
+    margin: 24px 0;
+    background-color: get-color(surface, separate);
+    width: 100%;
+    overflow-x: auto;
   }
-}
 
-.user-context {
-  display: flex;
-  flex-direction: column;
-  gap: $space-md;
-  max-width: 820px;
 
-  p {
-    margin-bottom: 1.5rem;
+  &__image {
+    display: block;
+    
+    height: 500px;
+    width: auto;
+    max-width: none;
+
+  
+    @media(max-width: 509px)  {
+      height: 400px;
+    }
   }
-}
-
-.goals-constraints {
-  display: flex;
-  flex-direction: column;
-  gap: $space-md;
-  max-width: 820px;
-
-  p {
-    margin-bottom: 1.5rem;
-  }
-}
-
-
-
-.initial-concept {
-  display: flex;
-  flex-direction: column;
-  gap: $space-xl;
-}
-
-.usability-issues {
-  display: flex;
-  flex-direction: column;
-  gap: $space-xl;
-}
-
-.user-flow {
-  display: flex;
-  flex-direction: column;
-  gap: $space-lg;
-}
-
-.ux-decisions {
-  display: flex;
-  flex-direction: column;
-  gap: $space-xl;
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: $space-xl;
-  }
-}
-
-.final-ui {
-  display: flex;
-  flex-direction: column;
-  gap: $space-lg;
-
-  &__diagram {
-    background-color: get-color(surface, separate);   
-    width: 100%; 
-    overflow-x: auto ;
-}
-
-  &__img { // Para centrar la imagen se necesita pasar el display: block. lo hice el reset
-    margin:  auto; // reparte el espacio sobrante a ambos lados centrando el elemento
-    height: 500px;
-    max-width: none;  // Evita que la imagen se adapte al contenedor / El navegador usa el ancho real de la imagen
+    margin: 24px 0;
   }
 
-  @media (max-width: 599px) {
-    &__img {
-      height: 400px;
-    }
-  }
 }
 
-.key-learning {
-  display: flex;
-  flex-direction: column;
-  gap: $space-xl;
-}
 
-.future-opportunities {
-  display: flex;
-  flex-direction: column;
-  gap: $space-md;
-  max-width: 820px;
 
-  p {
-  margin-bottom: 1.5rem;
-  }
-}
 
-// DIAGRAM STYLES
-.diagram-surface {
-  background-color: get-color(surface, separate);
-  width: 100%;
-  overflow-x: auto;
-}
 
-.diagram-image { // Para centrar la imagen se necesita pasar el display: block. lo hice el reset
-  margin: 0 auto; // reparte el espacio sobrante a ambos lados centrando el elemento
-  max-width: none; // Evita que la imagen se adapte al contenedor / El navegador usa el ancho real de la imagen
-  height: 500px;
-}
 
-@media (max-width: 599px) {
-  .diagram-image {
-    height: 400px;
-  }
-}
+
 

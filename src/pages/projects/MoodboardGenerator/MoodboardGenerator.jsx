@@ -8,18 +8,29 @@ import userFlowImg from "@/assets/images/projects/moodboard-generator/user-flow.
 import finalUiImg from "@/assets/images/projects/moodboard-generator/final-ui.png";
 import initialflow from "@/assets/images/projects/moodboard-generator/initial-flow.png";
 
+import GithubIcon from "@/components/ui/icons/GithubIcon/GithubIcon"
+import VercelIcon from "@/components/ui/icons/VercelIcon/VercelIcon"
+
+
 
 function MoodboardGenerator() {
+
+ 
   return (
+
+
     <div className="grid">
+
+    
+        
      
-        <div className="moodboard-layout">
+        <div className="ux-case">          
 
           <h1>UX case study</h1>
 
-          <section className="overview">
+          <section className="ux-case__section">
 
-            <h2>Overview</h2>
+            <h2 className="">Overview</h2>
 
             <p>
               The Moodboard Tool is a guided digital experience designed to help clients define 
@@ -41,13 +52,12 @@ function MoodboardGenerator() {
               <li><strong>Tools:</strong> Figma, JavaScript, Sass</li>
             </ul>
           </section>
+          
 
-          <section className="problem-statement">
-            <div>
-              <h2>Problem statement</h2>
-            </div>
-
-            <div>
+          <section className="ux-case__section">
+           
+              <h2>Problem statement</h2> 
+          
               <p>
                 While working as a commercial space designer, I repeatedly encountered the same challenge: 
                 project briefs were often incomplete, and clients rarely provided visual references to guide the process.
@@ -69,16 +79,14 @@ function MoodboardGenerator() {
                 There was an opportunity to create a structured, step-by-step system that simplifies 
                 decision-making and makes the design selection process more accessible for clients.
               </p>
-            </div>
+          
           </section>
 
-          <section className="user-context">
 
-            <div>
+
+          <section className="ux-case__section">
+            
               <h2>User context</h2>
-            </div>
-
-            <div>
 
               <p>
                 The tool is designed for clients working with interior designers
@@ -99,19 +107,13 @@ function MoodboardGenerator() {
                 between client and designer from the early stages of the project.
               </p>
 
-            </div>
-
           </section>
 
 
 
-          <section className="goals-constraints">
-
-            <div>
+          <section className="ux-case__section">
+           
               <h2>Goals & constraints</h2>
-            </div>
-
-            <div>
 
               <p>
                 The main objective was to create a structured system of predefined design
@@ -144,65 +146,67 @@ function MoodboardGenerator() {
                 furniture — worked cohesively as a unified system.
               </p>
 
-            </div>
-
           </section>
 
 
-          <section className="initial-concept">
-            <div className="header">
+          <section className="ux-case__section">
+            
               <h2>Initial concept</h2>
               <p className="body-l--emphasis-high">Early user flow concept defining the initial interaction model</p>
-            </div>
-            <div className="diagram-surface">
+         
+            <div className="ux-case__image-container">
               <img
-                className="diagram-image"
+                className="ux-case__image"
                 src={initialflow}
                 alt="initial flow"
               />
             </div>
+
           </section>
 
-          <section className="usability-issues">
-            <div className="header">
-              <h2>Usability issues identified</h2>
-              <p className="body-l--emphasis-high">
-                During the first iteration of the Moodboard tool, several usability frictions were identified through self-testing and mobile-first evaluation.
-              </p>
-            </div>
-            <div className="content">
-              <div className="content__items">
-                <p className="font-bold font-display">Gesture conflict on mobile</p>
+
+
+          <section className="ux-case__section">
+            
+            <h2>Usability issues identified</h2>
+            <p className="body-l--emphasis-high">
+              During the first iteration of the Moodboard tool, several usability frictions were identified through self-testing and mobile-first evaluation.
+            </p>
+         
+            <div className="ux-case__content">
+              <div className="ux-case__items">
+                <p><strong>Gesture conflict on mobile</strong></p>
                 <p>
                   Vertical scrolling within selection areas caused accidental page refresh on mobile devices, introducing friction and risking progress loss during the selection process.
                 </p>
               </div>
-              <div className="content__items">
-                <p className="font-bold font-display">Forced confirmation steps</p>
+
+              <div className="ux-case__items">
+                <p><strong>Forced confirmation steps</strong></p>
                 <p>
                   Requiring users to select an option to enable the “Next” button added unnecessary cognitive load and slowed down the overall flow.
                 </p>
               </div>
-              <div className="content__items">
-                <p className="font-bold font-display">Summary embedded in the selection flow</p>
+              <div className="ux-case__items">
+                <p><strong>Summary embedded in the selection flow</strong></p>
                 <p>
                   Placing the summary as part of the selection steps blurred the mental model between making choices and reviewing decisions.
                 </p>
               </div>
-              <div className="content__items">
-                <p className="font-bold font-display">Inconsistent step layouts</p>
+              <div className="ux-case__items">
+                <p><strong>Inconsistent step layouts</strong></p>
                 <p>
                   Different visual layouts across selection steps increased decision effort and reduced pattern recognition throughout the experience.
                 </p>
               </div>
-              <div className="content__items">
-                <p className="font-bold font-display">Limited overview in the summary</p>
+              <div className="ux-case__items">
+                <p><strong>Limited overview in the summary</strong></p>
                 <p>
                   The summary view required vertical scrolling to access all selected options, reducing clarity and immediate control.
                 </p>
               </div>
-              <div className="content__items">
-                <p className="font-bold font-display">Unclear back navigation</p>
+              <div className="ux-case__items">
+                <p><strong>Unclear back navigation</strong></p>
                 <p>
                   The back arrow icon was not visually integrated into the main navigation, causing users to actively search for a way to return to previous steps.
                 </p>
@@ -215,13 +219,12 @@ function MoodboardGenerator() {
 
 
 
-          <section className="ux-decisions">
-            <div className="header">
-              <h2>Design principles & UX decisions</h2>
-              <p className="body-l--emphasis-high">Based on the identified usability issues, the following design principles and UX decisions guided the evolution of the experience.</p>
-            </div>
+          <section className="ux-case__section">
+            <h2>Design principles & UX decisions</h2>
+            <p className="body-l--emphasis-high">Based on the identified usability issues, the following design principles and UX decisions guided the evolution of the experience.</p>
+
            
-            <div className="ux-decisions__list">
+            <div className="ux-case__list">
               {uxDecisionsData.map((decision, index) => (
                 <UxDecisionCard
                   key={ index }
@@ -233,57 +236,61 @@ function MoodboardGenerator() {
             </div>
           </section>
 
-          <section className="user-flow">
-            <div className="header">
+
+          <section className="ux-case__section">          
               <h2>User flow</h2>
               <p className="body-l--emphasis-high">Low-fidelity wireframe focused on interaction and decision-making </p>
-            </div>
-            <div className="diagram-surface">
+          
+            <div className="ux-case__image-container">
               <img
-                className="diagram-image"
+                className="ux-case__image"
                 src={userFlowImg}
                 alt="User flow"
               />
             </div>
           </section>
 
-          <section className="final-ui">
-            <div className="header">
+
+
+          <section className="ux-case__section">
+            
               <h2>Final UI</h2>
               <p className="body-l--emphasis-high">Final UI reflecting the defined user flow and interaction decisions. The interface translates the step-based flow, direct selection logic, and progress feedback into a clear and functional experience.</p>  
-            </div>
-            <div className="diagram-surface">
+           
+            <div className="ux-case__image-container">
               <img
-                className="diagram-image"
+                className="ux-case__image"
                 src={finalUiImg}
                 alt="Final UI"
               />
             </div>          
           </section>
 
-          <section className="key-learning">
-            <div className="header">
+          
+
+          <section className="ux-case__section">
+           
               <h2>Key learning</h2>
               <p className="body-l--emphasis-high">The key learnings below capture the main UX insights gained from testing, iteration, and design refinement.</p>
-            </div>
-            <div className="content">
-              <div className="content__items">
+           
+            <div className="ux-case__content">
+              <div className="ux-case__items">
                 <p className="font-bold font-display">Removing friction can be more effective than adding guidance</p>
                 <p>Eliminating the “Next” button and advancing users through direct selection proved to be more intuitive than explicit confirmation steps.</p>
               </div>
-              <div className="content__items">
+              <div className="ux-case__items">
                 <p className="font-bold font-display">Consistency across steps reduces cognitive load</p>
                 <p>Reusing the same interaction patterns (cards, sliders, layouts) helped users build confidence and move faster through decisions.</p>
               </div>
-              <div className="content__items">
+              <div className="ux-case__items">
                 <p className="font-bold font-display">Mobile-first testing reveals critical usability issues early</p>
                 <p>Gesture conflicts and navigation friction were only evident when testing the flow on mobile devices.</p>
               </div>
-                <div className="content__items">
+                <div className="ux-case__items">
                 <p className="font-bold font-display">Separating decision-making from review improves clarity</p>
                 <p>Isolating the summary step reinforced a clear mental model between choosing and evaluating, improving user control.</p>
               </div>
-                <div className="content__items">
+                <div className="ux-case__items">
                 <p className="font-bold font-display">Limited overview in the summary</p>
                 <p>The summary view required vertical scrolling to access all selected options, reducing clarity and immediate control.</p>
               </div>
@@ -291,14 +298,11 @@ function MoodboardGenerator() {
             </div>
           </section>
 
-          <section className="future-opportunities">
+          <section className="ux-case__section">
 
-            <div>
+           
               <h2>Future opportunities</h2>
-            </div>
-
-            <div>
-
+            
               <p>
                 Future iterations could expand the system beyond guided selection
                 into a more integrated design support platform.
@@ -323,17 +327,30 @@ function MoodboardGenerator() {
                 that streamlines the entire early design phase.
               </p>
 
-            </div>
+            
 
           </section>
 
 
+          <div className="ux-case__button">
+            <a
+              className="project-modal__button project-modal__button--primary"
+              href="https://moodboard-generator-2.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <VercelIcon />
+              View live
+            </a>        
+          </div>
 
        
        
         </div>
-      
-    
+
+        
+
+
     </div>
   );
 }

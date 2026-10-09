@@ -1,4 +1,4 @@
-import React, { use, useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useControls } from "leva"
 import { useGLTF } from '@react-three/drei'
 import { useTexture } from '@react-three/drei'
@@ -127,9 +127,9 @@ export default function CodeCardModel(props) {
         castShadow
         receiveShadow
         geometry={nodes['code-card'].geometry}
-        material={ new THREE.MeshStandardMaterial({ 
+        material={ new THREE.MeshBasicMaterial({ 
           map: texture,
-          roughness: 1
+          // roughness: 1
         })}
         rotation={[Math.PI / 2, 0, 0]}
       />

@@ -9,99 +9,83 @@
   display: flex;
   flex-direction: column;
   gap: 64px;
-  
-}
+  // grid-column: 2 / 3;
 
-.introduction__canvas-container {
-  // background-color: aqua;
-  position: relative;
-  width: 100%;
-}
+  &__canvas-container {
+    position: relative;
+    width: 100%;
+  }
 
-.introduction__canvas-wrapper {
-  background-color: get-color("brand", "dark");
-  height: 200px;
-  border-radius: $radius-lg;
-  // overflow: hidden; // 👈 solo afecta al canvas
-}
-
-// .introduction__canvas3d {
-//   // width: 100%;
-//   // height: 100%;
-// }
-
-.introduction {
-  // background-color: red;
+  &__canvas-wrapper {
+    background-color: get-color("brand", "dark");
+     height: 200px;
+     border-radius: $radius-lg;
+     overflow: hidden;
+  }
 
   &__photo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -78px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -78px;
 
-  width: 156px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background-color: get-color("brand", "regular");
-  // z-index: 2;
+    width: 156px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
   }
+
+  
+
 
   &__texts {
     display: flex;
     flex-direction: column;
     margin-top: 94px;
 
- 
-  }
+    > h2:first-child {
+      text-align: center;
+    }
 
-  &__title {
-    // background-color: red;
+    > p:first-of-type {
     text-align: center;
-  }
+    color: get-color("text", "secondary");   
+    
+    font-family: $family-display;
+    font-weight: $weight-bold;
+    }
 
-  &__subtitle {
-    text-align: center;
-    color: get-color("text", "secondary");
-  }
-
-  &__description {
+    > p:nth-of-type(2) {
     text-align: center;
     color: get-color("text", "secondary");
     max-width: 620px;
     margin: $space-sm auto;
     line-height: 1.55rem;
+
+    }
+
   }
-}
 
+  &__project-summary {
+      display: flex;
+      flex-direction: column;  
+      gap: 16px;
 
-.project-summary {
-  // background-color: pink;
-  display: flex;
-  flex-direction: column;
-  
-  gap: 16px;
-
-  &__title {
-    // background-color: pink;
-
-    font-family: $family-display;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    font-weight: 400    
+      > p:first-child {
+        font-family: $family-display;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        font-weight: 400    
+      }
   }
 
   &__project-filters {
-    // background-color: darkkhaki;
-
     display: flex;
     flex-direction: column;
     gap: 0;
   }
 
   &__buttons {
-    // background-color: darkgreen;
-    
     display: flex;
     gap: 32px;
     height: 40px;
@@ -115,49 +99,23 @@
     font-weight: 400;
   }
 
-  &__front-button {
+  &__button {
     cursor: pointer;
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 
     &--active {
       font-weight: 700;
       transform: scale(1.05);
       color: get-color(brand, regular);
       cursor: pointer;
+
     }
   }
-
-  &__ux-button {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    &--active {
-      font-weight: 700;
-      transform: scale(1.05);
-      color: get-color(brand, regular);      
-    }
-  }
-
-
-  &__commercial-button {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    &--active {
-      font-weight: 700;
-      transform: scale(1.05);
-      color: get-color(brand, regular);
-      
-    }
-  }
-
 
   &__underlines-indicator {
-
     position: relative;   
   }
 
-  
   &__front-bar {
 
     &.active {
@@ -190,29 +148,15 @@
 
       position: absolute;
       left:183px    
+    }
   }
-}
- 
 
-  &__content {
-
-     
-    // background-color: blue;
+  &__cards-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);    
     gap: 20px;
     padding: 12px;
     overflow-x: auto;
-
-  //   @media(max-width: 905px) {
-  //   display: flex;
-  //   flex-direction: row;
-  //   overflow-x: auto;
-  //   gap: 20px;      
-    
-  //  }
-
-   
   }
 
   &__project-card {
@@ -224,6 +168,7 @@
     }
   }
 }
+
 
 
 

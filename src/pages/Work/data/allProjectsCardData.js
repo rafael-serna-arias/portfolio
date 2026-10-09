@@ -27,7 +27,7 @@ import blenderIcon from "@/assets/icons/blender-icon.svg"
 
 export const allProjects = [
     {
-        id: "moodboard-generator",
+        id: "moodboardGenerator",
         image: codeGeneratorImage,
         title: "Moodboard Generator",
         description: "Interior styling tool",

@@ -19,6 +19,9 @@ function UxDecisionCard({ title, rationale, index }) {
   },
   ];
 
+  
+
+
   // aca usamos RESTO (%) para ciclar los colores si hay mas tarjetas que colores siempre va a dar valores entre 0 y 2
   const theme = badgeThemes[(index - 1) % badgeThemes.length];
 
@@ -26,7 +29,7 @@ function UxDecisionCard({ title, rationale, index }) {
     <div className="ux-decision-card">
 
       <div className="ux-decision-card__badge" style={{ backgroundColor: theme.bg, color: theme.text }}>
-        <p className="ux-decision-card__number">{ index }</p>  
+        <p style={{ backgroundColor: theme.bg, color: theme.text }}>{ index }</p>  
       </div>
 
       <div className="ux-decision-card__texts">

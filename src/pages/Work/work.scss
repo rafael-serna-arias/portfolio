@@ -39,6 +39,14 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
         padding: 0 12px;
+
+        @media(max-width: 904px) {
+            // background-color: red;
+            display: flex;
+            // grid-template-columns: 1fr;
+            overflow-x: auto;
+            padding: 12px ;
+        }
     }
 
     &__buttons {

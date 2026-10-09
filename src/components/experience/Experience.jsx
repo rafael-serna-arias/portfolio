@@ -5,9 +5,12 @@ import { useGLTF } from "@react-three/drei";
 import { Environment, Html, OrbitControls, OrthographicCamera } from "@react-three/drei"
 
 import { useControls } from 'leva'
-import Ejemplo from "./models/Ejemplo";
+
 import ColorCardModel from "./models/ColorCardModel"
 import CodeCardModel from "./models/CodeCardModel";
+import CardsModel from "./models/CardsModel";
+import { cardsData } from "./models/data/cardsModelData";
+
 
 
 function Experience() {
@@ -19,11 +22,14 @@ function Experience() {
 
 
   //MODELADO
-  const model = useGLTF("/models/edificio.glb")
+  // const model = useGLTF("/models/edificio.glb")
 
   return (
     <>
       {/* 🔥 Cámara sin perspectiva */}
+
+
+      
       <OrthographicCamera
         makeDefault
         position={[0, 0, 10]}
@@ -33,19 +39,34 @@ function Experience() {
         bottom={-5}
       />
 
-      <Environment preset="studio" />
+
+    {cardsData.map((card) => (
+      <CardsModel
+        key={card.id}
+        card={card}
+      />
+    ))}
+
+
+    {/* <OrbitControls /> */}
+
+     {/* <CardsModel /> */}
+
+
+
       
-      <ColorCardModel />
+      {/* <ColorCardModel />    
+      <CodeCardModel /> */}
 
-      {/* Luz */}
-      {/* <ambientLight intensity={6} /> */}
-      <OrbitControls makeDefault />
-
-    
-      <CodeCardModel />
+      {/* <Environment preset="studio" /> */}
 
       {/* < primitive object={ model.scene }/> */}     
       {/* <Ejemplo cardTwoPosition={[3, 1, 0]} /> */}
+
+      {/* Luz */}
+      {/* <ambientLight intensity={6} /> */}
+      {/* <OrbitControls makeDefault /> */}
+
     </>
   );
 }

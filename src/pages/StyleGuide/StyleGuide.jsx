@@ -587,18 +587,18 @@ function StyleGuide() {
               <div className="style-guide__main-container-radios">
                 <div className="style-guide__radios-content">
                     <div className="style-guide__texts-radios style-guide__texts-radios--8px">
-                      <p>small</p>
+                      <p>Small</p>
                       <p>8px</p>
                     </div>
 
                     <div className="style-guide__texts-radios style-guide__texts-radios--16px">
-                      <p>small</p>
-                      <p>8px</p>
+                      <p>Medium</p>
+                      <p>16px</p>
                     </div>
 
                     <div className="style-guide__texts-radios style-guide__texts-radios--32px">
-                      <p>small</p>
-                      <p>8px</p>
+                      <p>Large</p>
+                      <p>32px</p>
                     </div>              
                 </div>
               </div>

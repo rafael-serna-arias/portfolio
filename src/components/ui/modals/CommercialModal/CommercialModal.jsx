@@ -2,14 +2,39 @@ import CloseIcon from '../../icons/CloseIcon/CloseIcon'
 
 import './commercial-modal.scss'
 import {commercialModalData} from './commercialModalData.js'
-
+import { useEffect } from "react"
 
 export default function CommercialModal ({project, onClose}) {
 
     const currentProject = commercialModalData[project]
 
 
+    const isModalOpen = project !== null   
+
+    // Bloquea el scroll de la página cuando hay un modal abierto
+    useEffect(() => {
+
+        
+
+        document.body.style.overflow = isModalOpen
+        ? 'hidden'
+        : ''
+
+        return () => {
+        document.body.style.overflow = ''
+        }
+
+    }, [isModalOpen])
+
+
+    if (project === null) return null
+
     return ( 
+
+        
+
+
+
         <div className='project-modal grid'>
 
             <div

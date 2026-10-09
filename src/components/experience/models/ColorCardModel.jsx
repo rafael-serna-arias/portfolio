@@ -15,7 +15,6 @@ export default function ColorCardModel(props) {
   // -----------------------------
 
   const { nodes } = useGLTF("/models/color-card.glb")
-
   const texture = useTexture("/textures/color-card-texture.png")
 
 
@@ -23,7 +22,8 @@ export default function ColorCardModel(props) {
   // -----------------------------
   // REFS
   // -----------------------------
-
+  // guarda una referencia que persiste entre renders sin provocar un nuevo render.
+  // Referencia un elemento del DOM
   const myRef = useRef()
 
   // Guarda el ángulo acumulado de la animación
@@ -37,14 +37,11 @@ export default function ColorCardModel(props) {
 
   // No modificar la textura en cada render
   useEffect(() => {
-
     texture.flipY = false
     texture.colorSpace = THREE.SRGBColorSpace
     texture.generateMipmaps = false
     texture.minFilter = THREE.LinearFilter
-
     texture.needsUpdate = true
-
   }, [texture])
 
 
@@ -71,47 +68,35 @@ export default function ColorCardModel(props) {
   // -----------------------------
   // ANIMATION
   // -----------------------------
-
+  // state informacion de la escena.
+  // delta tiempo transcurrido desde el frame anterior.
   useFrame((state, delta) => {
-
+    // getElapesedTime() devuelve cuántos segundos han pasado desde que comenzó en reloj
     const time = state.clock.getElapsedTime()
 
+    // Esto se hace para que la velocidad no sea la misma si no que presente variaciones y sea mas interesante
+    // El primer valor controla la velocidad
+    // el segundo hace que oscile 
+    // el tercer valor controla cuanto varia la velocidad.     
+    const speed = 0.9 + Math.sin(time) * 0.5
 
-
-    // Genera un valor entre 0.1 → 1.1
-    // sin(time * número_grande) → más rápido
-    // sin(time * número_pequeño) → más lento
-    const speed = 0.6 + Math.sin(time * 0.05) * 0.5
-
-
-
-    // Se multiplica por delta para que la animación
-    // sea independiente de los FPS
+    // Se multiplica por delta para que la animación sea independiente de los FPS
+    // myRef necesito guardar un valor entre renders. 
     angleRef.current += delta * speed
 
-
-
     // Oscilación horizontal
-    // El 0.6 controla la amplitud
-    myRef.current.rotation.y = Math.sin(angleRef.current) * 0.6
-
-
+    // el ultimo valor controla el angulo de rotacion
+    myRef.current.rotation.y = Math.sin(angleRef.current) * THREE.MathUtils.degToRad(30)
 
     // Movimiento vertical descendente
     myRef.current.position.y += -delta * 3.5
 
-
-
     // Pequeña inclinación
     myRef.current.rotation.x = Math.cos(time * 0.5) * 0.2
 
-
-
     // Reinicia la posición cuando baja demasiado
     if (myRef.current.position.y < -10) {
-
       myRef.current.position.y = 10
-
     }
 
   })
@@ -125,23 +110,18 @@ export default function ColorCardModel(props) {
   return (
 
     <group
-      {...props}
-      dispose={null}
+      // {...props}
+      // dispose={null}
       ref={myRef}
       position={[position.x, position.y, position.z]}
       scale={scale}
     >
-
       <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.card.geometry}
-        material={new THREE.MeshStandardMaterial({
+        material={new THREE.MeshBasicMaterial({
           map: texture,
-          roughness: 1
         })}
       />
-
     </group>
 
   )

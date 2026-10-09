@@ -2,7 +2,7 @@
 import "./work.scss"
 import { useState } from "react"
 
-import { allProjects} from "./data/allProjectsData.js"
+import { allProjects} from "./data/allProjectsCardData.js"
 import { Link } from "react-router-dom"
 import ProjectCard from "../../components/cards/ProjectCard/ProjectCard.jsx"
 import CommercialModal from "../../components/ui/modals/CommercialModal/CommercialModal.jsx"
@@ -27,7 +27,7 @@ export default function Work () {
     const currentProject = allProjects.find(
         (item) => item.id === selectedProject
     );
-    console.log(currentProject)
+    console.log("currentProject", currentProject)
 
 
     return (
@@ -180,7 +180,7 @@ export default function Work () {
                         {currentProject?.modalType === "commercial-spaces-modal"
                             ?
                                 <CommercialModal 
-                                    project={currentProject}
+                                    project={currentProject.id}
                                     onClose={() => setSelectProject(null)}
                                 />
                             :
