@@ -1,5 +1,5 @@
 
-import "./Project-card.scss"; 
+import "./project-card.scss"; 
 
 export default function ProjectCard({
   title, 
