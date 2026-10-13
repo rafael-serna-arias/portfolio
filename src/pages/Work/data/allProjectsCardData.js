@@ -1,14 +1,14 @@
 
 // images
-import maxTikoImage from '@/assets/images/home/max-tiko.png'
-import heroesImage from '@/assets/images/home/heroes.png'
-import localChipsImage from '@/assets/images/home/local-chips.png'
-import saharaImage from '@/assets/images/home/sahara.png'
-import codeGeneratorImage from "@/assets/images/home/code-moodboard_2.png";
-import walletExperienceImage from '@/assets/images/home/wall-experience.png'
-import realStateExperienceImage from '@/assets/images/home/real-state.png'
-import uiStyleGuide from '@/assets/images/home/ui-style.png'
-import uiCaseStudy from '@/assets/images/home/ux-case.png'
+import maxTikoImage from '@/assets/images/home/max-tiko.webp'
+import heroesImage from '@/assets/images/home/heroes.webp'
+import localChipsImage from '@/assets/images/home/local-chips.webp'
+import saharaImage from '@/assets/images/home/sahara.webp'
+import codeGeneratorImage from "@/assets/images/home/code-moodboard_2.webp";
+import walletExperienceImage from '@/assets/images/home/wall-experience.webp'
+import realStateExperienceImage from '@/assets/images/home/real-state.webp'
+import uiStyleGuide from '@/assets/images/home/ui-style.webp'
+import uiCaseStudy from '@/assets/images/home/ux-case.webp'
 
 
 

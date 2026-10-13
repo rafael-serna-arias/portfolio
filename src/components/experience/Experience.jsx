@@ -6,8 +6,8 @@ import { Environment, Html, OrbitControls, OrthographicCamera } from "@react-thr
 
 import { useControls } from 'leva'
 
-import ColorCardModel from "./models/ColorCardModel"
-import CodeCardModel from "./models/CodeCardModel";
+// import ColorCardModel from "./models/ColorCardModel"
+// import CodeCardModel from "./models/CodeCardModel";
 import CardsModel from "./models/CardsModel";
 import { cardsData } from "./models/data/cardsModelData";
 

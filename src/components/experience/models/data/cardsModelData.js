@@ -5,7 +5,7 @@ export const cardsData = [
     {   
         id: 1,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/coral-card.png",     
+        textureLink: "/textures/coral-card.webp",     
         geometryName: "card-three",
         position: [-20, 1, 0],
         animation: {
@@ -14,16 +14,10 @@ export const cardsData = [
             phase: 1,
         }       
     },
-
-
-
-
-
-
     {   
         id: 2,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/code-uno-card.png",     
+        textureLink: "/textures/code-uno-card.webp",     
         geometryName: "card-two",
         position: [-9, 9, 0],
           animation: {
@@ -36,7 +30,7 @@ export const cardsData = [
     {   
         id: 3,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/color-card.png",     
+        textureLink: "/textures/color-card.webp",     
         geometryName: "card-one",
         position: [-1, -1.5, 0],
           animation: {
@@ -49,7 +43,7 @@ export const cardsData = [
     {   
         id: 4,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/code-two-card.png",     
+        textureLink: "/textures/code-two-card.webp",     
         geometryName: "card-two",
         position: [11, -7, 0],
           animation: {
@@ -62,7 +56,7 @@ export const cardsData = [
     {   
         id: 5,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/bedside-card.png",     
+        textureLink: "/textures/bedside-card.webp",     
         geometryName: "card-three",
         position: [15, 5, 0],
           animation: {
@@ -74,7 +68,7 @@ export const cardsData = [
     {   
         id: 6,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/bamboo-card.png",     
+        textureLink: "/textures/bamboo-card.webp",     
         geometryName: "card-three",
         position: [22, 17, 0],
           animation: {
@@ -86,7 +80,7 @@ export const cardsData = [
     {   
         id: 7,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/code-three-card.png",     
+        textureLink: "/textures/code-three-card.webp",     
         geometryName: "card-two",
         position: [3, 14, 0],
           animation: {
@@ -98,7 +92,7 @@ export const cardsData = [
     {   
         id:8,
         modelLink: "/models/cards-model.glb",
-        textureLink: "/textures/ux-study-card.png",     
+        textureLink: "/textures/ux-study-card.webp",     
         geometryName: "card-three",
         position: [-15, 17, 0],
           animation: {

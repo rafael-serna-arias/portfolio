@@ -1,7 +1,7 @@
 import Navbar from "@/components/layout/Navbar/Navbar";
 import Footer from "@/components/layout/Footer/Footer.jsx";
 
-import contactImage from "@/assets/images/home/myself.png";
+import contactImage from "@/assets/images/home/myself.webp";
 
 import "./contact.scss"
 import { useState } from "react";

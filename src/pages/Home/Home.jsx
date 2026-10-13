@@ -22,7 +22,7 @@ import ProjectModal from "../../components/ui/modals/ProjectModal/ProjectModal.j
 import CommercialModal from "../../components/ui/modals/CommercialModal/CommercialModal.jsx";
 import Navbar from "../../components/layout/Navbar/Navbar.jsx";
 
-import contactImage from "@/assets/images/home/myself.png";
+import contactImage from "@/assets/images/home/myself.webp";
 
 function Home() {
 

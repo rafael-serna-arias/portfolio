@@ -1,8 +1,8 @@
 
-import maxTikoImage from '@/assets/images/commercial-modal/max-tiko.png'
-import heroesImage  from '@/assets/images/commercial-modal/heroes.png'
-import saharaImage from '@/assets/images/commercial-modal/sahara.png'
-import localChipsImage from '@/assets/images/commercial-modal/local-chips.png'
+import maxTikoImage from '@/assets/images/commercial-modal/max-tiko.webp'
+import heroesImage  from '@/assets/images/commercial-modal/heroes.webp'
+import saharaImage from '@/assets/images/commercial-modal/sahara.webp'
+import localChipsImage from '@/assets/images/commercial-modal/local-chips.webp'
 
 
 

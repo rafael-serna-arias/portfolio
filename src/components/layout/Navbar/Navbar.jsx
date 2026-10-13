@@ -6,7 +6,7 @@ import { useState } from "react";
 import MenuIcon from "../../ui/icons/MenuIcon/MenuIcon";
 import CloseIcon from "../../ui/icons/CloseIcon/CloseIcon";
 
-import HomeImg from "@/assets/images/navbar/home.png"
+import HomeImg from "@/assets/images/navbar/home.webp"
 export default function Navbar () {
 
     
