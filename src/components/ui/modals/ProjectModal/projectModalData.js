@@ -1,8 +1,8 @@
 import MoodboardGenerator from "../../../../pages/projects/MoodboardGenerator/MoodboardGenerator";
 
-import moodboardGeneratorImg from "@/assets/images/projects-modals/moodboard-generator.png"
-import walletExperienceImg from "@/assets/images/projects-modals/wallet-experience.png"
-import realStateExperienceImg from "@/assets/images/projects-modals/real-state-experience.png"
+import moodboardGeneratorImg from "@/assets/images/projects-modals/moodboard-generator.webp"
+import walletExperienceImg from "@/assets/images/projects-modals/wallet-experience.webp"
+import realStateExperienceImg from "@/assets/images/projects-modals/real-state-experience.webp"
 
 
 
