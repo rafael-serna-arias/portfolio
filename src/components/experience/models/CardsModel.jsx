@@ -36,6 +36,7 @@ export default function CardsModel ({ card }) {
     useFrame((state, delta) => {
         
         // getElapesedTime() devuelve cuántos segundos han pasado desde que comenzó en reloj
+        const safeDelta = Math.min(delta, 0.05)
         const time = state.clock.getElapsedTime()
 
         // Esto se hace para que la velocidad no sea la misma si no que presente variaciones y sea mas interesante
@@ -46,17 +47,18 @@ export default function CardsModel ({ card }) {
 
         // Se multiplica por delta para que la animación sea independiente de los FPS
         // myRef necesito guardar un valor entre renders. 
-        angleRef.current += delta * speed
+        angleRef.current += safeDelta * speed
 
         // Oscilación horizontal
         // el ultimo valor controla el angulo en el que oscila. 
-        myRef.current.rotation.y = Math.sin(
+        myRef.current.rotation.y =
+        Math.sin(
             time * card.animation.speed + card.animation.phase
-        ) * 
-        THREE.MathUtils.degToRad(card.animation.amplitude)
+        ) * THREE.MathUtils.degToRad(card.animation.amplitude)
+
   
         // Movimiento vertical descendente
-        myRef.current.position.y += -delta * 3
+        myRef.current.position.y -= safeDelta * 3
 
         // pequeña inclinación 
         myRef.current.rotation.x = Math.cos(time * 0.5) * 0.2
