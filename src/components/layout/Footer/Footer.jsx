@@ -10,9 +10,9 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const socialIcons = [ faLinkedin, faCodepen, faGithub, ];
 
 const links = [
-  "https://www.linkedin.com/in/rafael-serna-arias-051150307/",
+  "https://www.linkedin.com/in/rafael-serna",
   "https://codepen.io/Rafcelot",
-  "https://github.com/Rafcelot",
+  "https://github.com/rafael-serna-arias",
 ];
 
 
